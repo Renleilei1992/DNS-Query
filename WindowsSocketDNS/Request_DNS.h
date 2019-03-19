@@ -28,6 +28,25 @@ struct DNSHeader
 	USHORT usAdditionalCount; //Additional×Ö¶Î¸öÊý
 };
 
+//DNS header structure
+struct DNS_HEADER {
+	unsigned short identifier;				// identification number
+	unsigned char recursion_desired : 1;	// recursion desired
+	unsigned char truncated_message : 1;	// truncated message
+	unsigned char authority_answer : 1;		// authoritive answer
+	unsigned char op_code : 4;				// purpose of message
+	unsigned char query_or_response : 1;	// query/response flag
+	unsigned char response_code : 4;		// response code
+	unsigned char checking_disabled : 1;	// checking disabled
+	unsigned char authenticated_data : 1;	// authenticated data
+	unsigned char z : 1;					// its z! reserved
+	unsigned char recursion_available : 1;	// recursion available
+	unsigned short question_count;			// number of question entries
+	unsigned short answer_count;			// number of answer entries
+	unsigned short authority_count;			// number of authority entries
+	unsigned short resource_count;			// number of resource entries
+};
+
 class RequestDNS
 {
 public:
