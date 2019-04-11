@@ -15,3 +15,6 @@ if gethostbyname() failed, this solution can appoint specify DNS server to resol
   - Send the DNS request package to the appointed DNS server by UDP
   - Recieve the DNS server response and then Decode the respond package
   - Get the URL resolve result
+
+## to be continue
+  - let the project can cross platform, Linux/MacOS/Windows all can use this project
